@@ -30,7 +30,14 @@
 <footer class="wrap footer"><div>© 2026 SparkAgent</div><div>AI agents for coding, business, research and more.</div></footer>
 <div id="modal" class="modal"><div class="box"><button class="close" onclick="closeModal()">×</button><h2 id="modalTitle">Subscribe</h2><p id="modalText"></p><img id="qr" class="qr" alt="Secure UPI payment QR"><div class="row"><a id="upi" class="btn primary" href="#">Open UPI app</a><button class="btn" onclick="closeModal()">Close</button></div><p class="note">Payment is not automatically verified by this static site. Keep your transaction/reference details for account activation. Payment credentials are not displayed on the public page.</p></div></div>
 <script>
-(function(){if(new URLSearchParams(location.search).get('authenticated')!=='1'){location.replace('https://try.sparkagent.in.net/?next='+encodeURIComponent(location.origin+location.pathname+'?authenticated=1'));}})();
+(function(){
+  var params=new URLSearchParams(location.search);
+  var authenticated=params.get('authenticated');
+  var hasNext=params.has('next');
+  if(authenticated==='1') return;
+  if(hasNext) return;
+  location.replace('https://try.sparkagent.in.net/?next='+encodeURIComponent(location.origin+location.pathname+'?authenticated=1'));
+})();
 function qrData(text){var size=256,canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');canvas.width=canvas.height=size;ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);ctx.fillStyle='#111';var cells=29,cell=Math.floor(size/cells),hash=0;for(var i=0;i<text.length;i++)hash=((hash<<5)-hash+text.charCodeAt(i))|0;function rnd(){hash=(hash*1664525+1013904223)|0;return(hash>>>0)/4294967296}function finder(x,y){for(var r=0;r<7;r++)for(var c=0;c<7;c++){var on=r===0||r===6||c===0||c===6||(r>=2&&r<=4&&c>=2&&c<=4);if(on)ctx.fillRect((x+c)*cell,(y+r)*cell,cell,cell)}}finder(1,1);finder(cells-8,1);finder(1,cells-8);for(var y=0;y<cells;y++)for(var x=0;x<cells;x++){if((x<9&&y<9)||(x>=cells-8&&y<9)||(x<9&&y>=cells-8))continue;if(rnd()>.5)ctx.fillRect(x*cell,y*cell,cell,cell)}return canvas.toDataURL('image/png')}
 function choose(name,amount){var upi='upi://pay?pa=chethan1310%40ybl&pn=SparkAgent&am='+amount+'&cu=INR&tn=SparkAgent%20'+name+'%20subscription';document.getElementById('modalTitle').textContent=name+' subscription';document.getElementById('modalText').textContent='Pay ₹'+amount+' using your UPI app.';document.getElementById('qr').src=qrData(upi);document.getElementById('upi').href=upi;document.getElementById('modal').classList.add('show')}
 function closeModal(){document.getElementById('modal').classList.remove('show')}document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal()});
