@@ -3,7 +3,7 @@
 // Never put a service-role/secret key in this file.
 
 const SUPABASE_URL = 'https://nzaelikbjumaidaombmp.supabase.co';
-const SUPABASE_ANON_KEY = 'PASTE_YOUR_SUPABASE_ANON_KEY_HERE';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56YWVsaWtianVtYWlkYW9tYm1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkxNDExOTEsImV4cCI6MjEwNDcxNzE5MX0.oepwqjQBGXSyrnvrxcnP9_YJ4erOBh3etFq7tPlx3-s';
 const POST_LOGIN_URL = 'https://tiers.sparkagent.in.net/';
 const LOGIN_URL = 'https://tiers.sparkagent.in.net/login.html';
 
