@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in — SparkAgent</title>
+<meta name="description" content="Sign in to your SparkAgent account.">
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#050507;color:#f7f7fb}body{min-height:100vh;display:grid;place-items:center;padding:24px;overflow:hidden}body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0%,rgba(122,88,255,.3),transparent 38%),radial-gradient(circle at 100% 70%,rgba(255,77,190,.12),transparent 35%)}.wrap{width:min(440px,100%)}.brand{text-align:center;font-size:25px;font-weight:850;letter-spacing:-.8px;margin-bottom:28px}.brand span{background:linear-gradient(90deg,#a98cff,#ff72c9);-webkit-background-clip:text;background-clip:text;color:transparent}.card{background:rgba(13,13,18,.92);border:1px solid #292933;border-radius:24px;padding:32px;box-shadow:0 30px 100px rgba(0,0,0,.5);backdrop-filter:blur(20px)}h1{margin:0 0 8px;text-align:center;font-size:28px;letter-spacing:-.8px}p.sub{text-align:center;color:#9998a5;font-size:14px;margin:0 0 28px}.field{margin-bottom:16px}label{display:block;color:#c9c8d0;font-size:12px;font-weight:700;margin-bottom:8px}input{width:100%;padding:14px 15px;border-radius:12px;border:1px solid #30303a;background:#09090d;color:#fff;outline:none;font:inherit}input:focus{border-color:#8063ff;box-shadow:0 0 0 3px rgba(128,99,255,.12)}.submit{width:100%;border:0;border-radius:12px;padding:14px;background:#fff;color:#08080a;font-weight:800;font-size:14px;cursor:pointer;margin-top:4px}.submit:hover{background:#eee}.links{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-size:12px}.links a{color:#aaa;text-decoration:none}.links a:hover{color:#fff}.divider{display:flex;align-items:center;gap:12px;margin:25px 0;color:#666;font-size:11px}.divider:before,.divider:after{content:"";height:1px;background:#292933;flex:1}.social{display:grid;grid-template-columns:1fr 1fr;gap:10px}.social a{padding:12px;border:1px solid #2c2c36;border-radius:11px;text-align:center;text-decoration:none;color:#ddd;font-size:13px;font-weight:700;background:#111118}.social a:hover{border-color:#5e4e9d}.signup{text-align:center;color:#888;font-size:13px;margin:24px 0 0}.signup a{color:#b7aaff;text-decoration:none;font-weight:700}.back{display:block;text-align:center;margin-top:20px;color:#777;text-decoration:none;font-size:12px}.back:hover{color:#fff}.notice{margin-top:18px;padding:11px 12px;border-radius:10px;background:#111119;border:1px solid #23232d;color:#777;font-size:11px;line-height:1.5;text-align:center}@media(max-width:480px){.card{padding:25px 20px}.social{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="brand">Spark<span>Agent</span></div>
+<section class="card">
+<h1>Welcome back</h1>
+<p class="sub">Sign in to manage your SparkAgent plan and account.</p>
+<form action="https://try.sparkagent.in.net" method="get">
+<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+<div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Your password" required></div>
+<button class="submit" type="submit">Sign in</button>
+</form>
+<div class="links"><a href="https://try.sparkagent.in.net">Forgot password?</a><a href="https://try.sparkagent.in.net">Create account</a></div>
+<div class="divider">OR CONTINUE WITH</div>
+<div class="social"><a href="https://try.sparkagent.in.net">Google</a><a href="https://try.sparkagent.in.net">GitHub</a></div>
+<p class="signup">New to SparkAgent? <a href="https://try.sparkagent.in.net">Create an account</a></p>
+<div class="notice">This is a standalone HTML login page. Account authentication is handled by SparkAgent's secure authentication service.</div>
+</section>
+<a class="back" href="https://tiers.sparkagent.in.net/">← Back to Plans</a>
+</main>
+</body>
+</html>
